@@ -1,4 +1,4 @@
-# ATT-Attack
+# Adaptive Token Tuning Attack (ATT-Attack)
 [[Paper]()] [[Supp]()] [[Poster]()] [[Presentation]()]
 
 The official implementation of [**\[NIPS 2024\] "Boosting the Transferability of Adversarial Attack on Vision Transformer with Adaptive Token Tuning", Di Ming, Peng Ren, Yunlong Wang, Xin Feng\***](). 
