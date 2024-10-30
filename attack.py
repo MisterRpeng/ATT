@@ -13,7 +13,7 @@ def arg_parse():
     parser.add_argument('--gpu', type=str, default='0', help='gpu device.')
     parser.add_argument('--batch_size', type=int, default=1, metavar='N',
                         help='input batch size for reference (default: 16)')
-    parser.add_argument('--source_model', type=str, default='vit_base_patch16_224', help='')
+    parser.add_argument('--source_model', type=str, default='visformer_small', help='')
     parser.add_argument('--lam', type=float, default=0.01, help='adaptive_factor')
     args = parser.parse_args()
     args.opt_path = os.path.join('./advimages/', 'model_{}-method_{}'.format(args.source_model, args.attack))
