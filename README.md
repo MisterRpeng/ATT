@@ -88,7 +88,7 @@ If you find this work is useful in your research, please cite our paper:
     author    = {Ming, Di and Peng, Ren and Wang, Yunlong and Feng, Xin},
     title     = {Boosting the Transferability of Adversarial Attack on Vision Transformer with Adaptive Token Tuning},
     booktitle = {Advances in Neural Information Processing Systems},
-    month     = {},
+    month     = {December},
     year      = {2024},
     pages     = {}
 }
