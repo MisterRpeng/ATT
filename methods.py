@@ -313,7 +313,7 @@ class ATT(BaseAttack):
                 self.model.transformers[transformer_ind].blocks[used_block_ind].mlp.register_backward_hook(mlp_ATT)
         elif self.model_name == 'cait_s24_224':
             self.get_fea_hook = self.model.blocks[23].register_forward_hook(get_fea)
-            self.get_grad_hook = self.model.blocks[23].register_forward_hook(get_grad)
+            self.get_grad_hook = self.model.blocks[23].register_backward_hook(get_grad)
             for block_ind in range(26):
                 if block_ind < 24:
                     self.model.blocks[block_ind].attn.attn_drop.register_backward_hook(attn_ATT)
@@ -327,7 +327,7 @@ class ATT(BaseAttack):
                     self.model.blocks_token_only[block_ind - 24].mlp.register_backward_hook(mlp_ATT)
         elif self.model_name == 'visformer_small':
             self.get_fea_hook = self.model.stage3[2].register_forward_hook(get_fea)
-            self.get_grad_hook = self.model.stage3[2].register_forward_hook(get_grad)
+            self.get_grad_hook = self.model.stage3[2].register_backward_hook(get_grad)
             for block_ind in range(8):
                 if block_ind < 4:
                     self.model.stage2[block_ind].attn.attn_drop.register_backward_hook(attn_ATT)
